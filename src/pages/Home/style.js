@@ -1,12 +1,23 @@
 import styled from 'styled-components';
-import background from '../../assets/images/background.jpg';
 
 const PageBackground = styled.div`
-	background-image: url(${background});
+	background-image: url('./images/background.jpg');
 	position: relative;
 	height: 100vh;
 	width: 100vw;
 	background-size: cover;
+
+	& .ant-table-cell {
+  text-align: center;
+  font-size: 16px;
+  width: 25%;
+	}
+
+	& .ant-table-thead,
+	& .ant-table-cell {
+		font-size: 18px;
+		font-weight: bold;
+	}
 `;
 
 export { PageBackground };

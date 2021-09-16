@@ -22,6 +22,10 @@ export default class ErrorBoundary extends React.Component {
     const { hasError } = this.state;
     const { children } = this.props;
 
-    return hasError ? <RenderError /> : children;
+    if (!hasError) {
+      return children;
+    }
+    
+    return <RenderError />;
   }
 }

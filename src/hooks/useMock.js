@@ -7,10 +7,10 @@ const useMock = () => {
 	const [data, setData] = useState(undefined);
 	
 	const fetchService = () => {
-		service.getData()
+		service.getData(5000)
 			.then(res => setData(res.data))
 			.catch(err => setError(err))
-			.finally(() => setLoading(false));
+      .finally(() => setLoading(false));
 	}
 	
 	useEffect(() => {
@@ -20,32 +20,6 @@ const useMock = () => {
 	useEffect(() => {
 		setLoading(true);
   }, []);
-
-  // useEffect(() => {
-	// 	setLoading(true);
-		
-	// 	return () => {
-	// 		console.log('effect once');
-	// 		setLoading(false);
-	// 	}
-  // }, []);
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setError(false);
-  //   try {
-  //     setTimeout(() => {
-  //       setData(users);
-  //     }, 3000);
-  //   } catch (error) {
-  //     setError(errorMock);
-  //   }
-  //   setLoading(false);
-  //   // return () => clearTimeout();
-	// 	return () => {
-	// 		console.log('effect once');
-	// 	}
-  // }, [setData]);
 
   return {
     data,

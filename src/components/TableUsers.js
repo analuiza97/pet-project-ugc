@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'antd';
-// import { userMockup } from '../utils/usersMockup';
 import styled from 'styled-components';
 import useMock from '../hooks/useMock';
 
@@ -37,12 +36,6 @@ export default function TableUsers() {
 
   useEffect(() => {
     if (data) {
-      // const arr = data.map(el => {
-      //   if (el.prontuario === '' || el.nome === '' || el.email === '' || el.bit === '') {
-      //     throw 'empty property';
-      //   }
-      //   return el;
-      // });
       setUsers(data);
     }
   }, [data]);
@@ -52,7 +45,7 @@ export default function TableUsers() {
   }
 
   if (error) {
-    return null;
+    return null
   }
 
   return (
@@ -63,6 +56,7 @@ export default function TableUsers() {
         <Column title="E-mail" dataIndex="email" key="email" align="center" />
         <Column title="Escritório BIT" dataIndex="bit" key="bit" align="center" />
       </Table>
+      {/* <span>{users[4].email}</span> */}
     </Container>
   );
 }

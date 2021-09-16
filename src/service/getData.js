@@ -11,7 +11,6 @@ const getData = (ms = 3000) => {
 		const failure = () => setTimeout(() => reject(response), ms);
 		return response.status < 400 ? success() : failure();
 	});
-
 	return promise;
 }
 

@@ -24,6 +24,15 @@ const Container = styled.div`
   }
 `;
 
+const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+`;
+
+const Loading = styled.img`
+`;
+
 const { Column } = Table;
 
 export default function TableUsers() {
@@ -41,11 +50,15 @@ export default function TableUsers() {
   }, [data]);
 
   if (loading) {
-    return <h1>Loading</h1>;
+    return (
+      <ImgContainer>
+        <Loading src="./images/preloader.gif" alt="loading" />
+      </ImgContainer>
+    );
   }
 
   if (error) {
-    return null
+    return null;
   }
 
   return (

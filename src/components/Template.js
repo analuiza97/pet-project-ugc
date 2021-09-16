@@ -4,7 +4,7 @@ import ErrorBoundary from './ErrorBoundary';
 import Head from 'next/head';
 
 function Template({ children, title }) {
-  debugger
+  //debugger
   return (
     <>
       <Head>

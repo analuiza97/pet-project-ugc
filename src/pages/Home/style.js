@@ -20,4 +20,4 @@ const PageBackground = styled.div`
 	}
 `;
 
-export default { PageBackground };
+export default PageBackground;

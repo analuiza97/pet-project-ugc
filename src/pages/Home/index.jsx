@@ -7,6 +7,7 @@ function Home() {
   return (
     <PageBackground>
       <Template>
+        <h1>teste</h1>
         <Container />
       </Template>
     </PageBackground>

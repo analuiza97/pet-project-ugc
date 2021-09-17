@@ -1,7 +1,6 @@
 import Template from '../../components/Template';
 import Container from '../../components/TableUsers';
-
-import { PageBackground } from './style';
+import PageBackground from './style';
 
 function Home() {
   return (

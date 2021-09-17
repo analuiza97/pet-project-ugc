@@ -24,6 +24,15 @@ const Container = styled.div`
   }
 `;
 
+const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+`;
+
+const Loading = styled.img`
+`;
+
 const { Column } = Table;
 
 export default function TableUsers() {
@@ -31,7 +40,10 @@ export default function TableUsers() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    console.log('logs data service', { data, error, loading });
+    if (error) {
+      return console.error('logs error service', error);
+    }
+    return console.log('logs data service', { data, error, loading });
   });
 
   useEffect(() => {
@@ -41,7 +53,11 @@ export default function TableUsers() {
   }, [data]);
 
   if (loading) {
-    return <h1>Loading</h1>;
+    return (
+      <ImgContainer>
+        <Loading src="./images/preloader.gif" alt="loading" />
+      </ImgContainer>
+    );
   }
 
   if (error) {

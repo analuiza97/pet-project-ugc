@@ -29,7 +29,7 @@ const Footer = () => (
       <a href="https://b2wdigital.workplace.com" target="_blank" rel="noopener noreferrer">
         <Workplace src='./images/workplace-logo.svg' alt="Workplace logo" />
       </a>
-        <Americanas src='./images/americanas.png' alt="Americanas sa logo" />
+        <Americanas src='./images/americanas.png' alt="Americanas s.a. logo" />
     </ContentContainer>
   </FooterContainer>
 );

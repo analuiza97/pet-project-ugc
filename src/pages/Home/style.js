@@ -6,18 +6,16 @@ const PageBackground = styled.div`
 	height: 100vh;
 	width: 100vw;
 	background-size: cover;
+`;
 
-	& .ant-table-cell {
-  text-align: center;
-  font-size: 16px;
-  width: 25%;
-	}
+const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+`;
 
-	& .ant-table-thead,
-	& .ant-table-cell {
-		font-size: 18px;
-		font-weight: bold;
-	}
+const Loading = styled.img`
 `;
 
 export default PageBackground;
+export { PageBackground, ImgContainer, Loading };

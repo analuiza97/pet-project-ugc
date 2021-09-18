@@ -33,8 +33,6 @@ function Home() {
     return null
   }
 
-
-
   return (
     <PageBackground>
       <Template>

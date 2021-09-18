@@ -15,7 +15,9 @@ function Template({ children, title }) {
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
       </Head>
       <Header />
-      <ErrorBoundary>{children}</ErrorBoundary>
+      <main>
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </main>
       <Footer />
     </>
   );

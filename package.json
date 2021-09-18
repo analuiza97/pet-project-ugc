@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "antd": "^4.16.13",
     "babel-preset-next": "^1.4.0",
     "next": "11.1.2",
     "react": "17.0.2",
@@ -19,9 +15,11 @@
     "eslint-config-next": "11.1.2"
   },
   "scripts": {
+    "clean": "rm -rf ./.next ./out ./*.log ./next-env.d.ts",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "eslintConfig": {
     "extends": [

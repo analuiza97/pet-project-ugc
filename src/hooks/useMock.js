@@ -6,10 +6,8 @@ const useMock = () => {
   const [error, setError] = useState();
 	const [data, setData] = useState();
 	
-	const fetchService = () => {
-		service.getData()
-			.then(res => setData(res))
-			.catch(err => setError(err))
+	const fetchData = () => {
+		service.getUsers().then(res => setData(res)).catch(err => setError(err))
 	}
 	
 	useEffect(() => {
@@ -17,15 +15,11 @@ const useMock = () => {
 	}, [data, error]);
 
 	useEffect(() => {
-		return loading ? fetchService() : false;
+		return loading ? fetchData() : false;
 	}, [loading]);
 	
 	useEffect(() => {
 		setLoading(true);
-
-		return () => {
-			console.log('saiu')
-		};
   }, []);
 
   return {

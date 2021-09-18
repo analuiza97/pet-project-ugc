@@ -40,10 +40,7 @@ export default function TableUsers() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    if (error) {
-      return console.error('logs error service', error);
-    }
-    return console.log('logs data service', { data, error, loading });
+    console.log('logs data service', { data, error, loading });
   });
 
   useEffect(() => {
@@ -72,7 +69,6 @@ export default function TableUsers() {
         <Column title="E-mail" dataIndex="email" key="email" align="center" />
         <Column title="Escritório BIT" dataIndex="bit" key="bit" align="center" />
       </Table>
-      {/* <span>{users[4].email}</span> */}
     </Container>
   );
 }

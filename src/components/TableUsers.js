@@ -4,23 +4,19 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   overflow: hidden;
-  /* margin: 48px auto 0;
-  margin-top: 7%;
-  width: 80%;
-  font-family: Quicksand, arial, sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-  border-radius: 5px; */
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  max-width: 1000px;
 `;
 
 const Table = styled.table`
   background: #ffffff;
   border-color: transparent;
   border-spacing: 0;
-  width: calc(100% - 20px);
-  max-width: 1000px;
-  margin: auto;
 
   > thead {
+
     & th {
       background: #fafafa;
       border-bottom: 1px solid #f0f0f0;
@@ -30,9 +26,12 @@ const Table = styled.table`
       overflow-wrap: break-word;
       text-transform: capitalize;
     }
+
   }
   > tbody {
+
     > tr {
+
       > td {
         position: relative;
         padding: 16px;
@@ -42,8 +41,15 @@ const Table = styled.table`
         width: 25%;
         border-bottom: 1px solid #f0f0f0;
       }
+      
+      &:last-child {
+        > td {
+          border: none;
+        }
+      }
     }
   }
+  
   > tfoot {
     padding: 16px;
     color: rgba(0,0,0,.85);

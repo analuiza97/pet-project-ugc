@@ -4,14 +4,12 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
   position: absolute;
   bottom: 0;
-  width: 100%;
-`;
-
-const ContentContainer = styled.div`
-  a {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: 30px;
+  justify-content: space-between;
 `;
 
 const Workplace = styled.img`
@@ -19,18 +17,15 @@ const Workplace = styled.img`
 `;
 
 const Americanas = styled.img`
-  height: 70px;
-  margin-left: 85%;
+  height: 30px;
 `;
 
 const Footer = () => (
   <FooterContainer>
-    <ContentContainer>
-      <a href="https://b2wdigital.workplace.com" target="_blank" rel="noopener noreferrer">
-        <Workplace src='./images/workplace-logo.svg' alt="Workplace logo" />
-      </a>
-        <Americanas src='./images/americanas.png' alt="Americanas s.a. logo" />
-    </ContentContainer>
+    <a href="https://b2wdigital.workplace.com" target="_blank" rel="noopener noreferrer">
+      <Workplace src='./images/workplace-logo.svg' alt="Workplace logo" />
+    </a>
+      <Americanas src='./images/logotype-americanas.svg' alt="Americanas s.a. logo" />
   </FooterContainer>
 );
 

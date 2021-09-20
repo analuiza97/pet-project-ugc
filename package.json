@@ -19,9 +19,11 @@
     "eslint-config-next": "11.1.2"
   },
   "scripts": {
+    "clean": "rm -rf ./.next ./out ./*.log ./next-env.d.ts",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "eslintConfig": {
     "extends": [

@@ -1,1 +1,1 @@
-export * as service from './getData';
+export * as service from './getUsers';

@@ -1,46 +1,83 @@
-import { Table } from 'antd';
+// import { Table } from 'antd';
+import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
   overflow: hidden;
-  margin: 48px auto 0;
+  /* margin: 48px auto 0;
   margin-top: 7%;
   width: 80%;
   font-family: Quicksand, arial, sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-  border-radius: 5px;
+  border-radius: 5px; */
+`;
 
-  & table {
+const Table = styled.table`
+  background: #ffffff;
+  border-color: transparent;
+  border-spacing: 0;
+  width: calc(100% - 20px);
+  max-width: 1000px;
+  margin: auto;
 
-    > thead {
-      & .ant-table-cell {
-        font-size: 18px;
-        font-weight: bold;
-      }
+  > thead {
+    & th {
+      background: #fafafa;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 16px;
+      overflow-wrap: break-word;
+      text-transform: capitalize;
     }
-  
-    > tbody {
-      & .ant-table-cell {
+  }
+  > tbody {
+    > tr {
+      > td {
+        position: relative;
+        padding: 16px;
+        overflow-wrap: break-word;
         text-align: center;
         font-size: 16px;
         width: 25%;
+        border-bottom: 1px solid #f0f0f0;
       }
     }
   }
+  > tfoot {
+    padding: 16px;
+    color: rgba(0,0,0,.85);
+    background: #fafafa;
+  }
 `;
 
+const TableUsers = ({ data }) => {
 
-export default function TableUsers({ data }) {
-  const { Column } = Table;
+  if (!data.length) {
+    return null;
+  }
+
+  const headCols = () => {
+    const [obj] = data;
+
+    const headCols = Object.keys(obj).map(title => <th key={title}>{title}</th>);
+    return headCols;
+  }
+
+  const TableHead = <tr>{headCols()}</tr>
+
+  const tableBody = data.map(obj => {
+    const bodyCols = Object.keys(obj).map(key => <td key={obj[key]}>{obj[key]}</td>);
+    const key = Math.random();
+    return <tr key={key}>{bodyCols}</tr>;
+  });
+
   return (
     <Container>
-      <Table dataSource={data} pagination={false} size={'big'} footer={() => ''}>
-        <Column title="Prontuário" dataIndex="prontuario" key="prontuario" align="center" />
-        <Column title="Nome" dataIndex="nome" key="nome" align="center" />
-        <Column title="E-mail" dataIndex="email" key="email" align="center" />
-        <Column title="Escritório BIT" dataIndex="bit" key="bit" align="center" />
+      <Table>
+        <thead>{TableHead}</thead>
+        <tbody>{tableBody}</tbody>
       </Table>
-      {/* <span>{users[4].email}</span> */}
     </Container>
   );
 }
@@ -48,3 +85,6 @@ export default function TableUsers({ data }) {
 TableUsers.defaultProps = {
   data: [],
 }
+
+export default TableUsers;
+export { TableUsers };

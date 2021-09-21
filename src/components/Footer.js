@@ -12,8 +12,8 @@ const FooterContainer = styled.footer`
   justify-content: space-between;
 `;
 
-const Workplace = styled.img`
-  height: 30px;
+const GitHub = styled.img`
+  height: 32px;
 `;
 
 const Americanas = styled.img`
@@ -22,10 +22,10 @@ const Americanas = styled.img`
 
 const Footer = () => (
   <FooterContainer>
-    <a href="https://b2wdigital.workplace.com" target="_blank" rel="noopener noreferrer">
-      <Workplace src='./images/workplace-logo.svg' alt="Workplace logo" />
+    <a href="https://github.com/analuiza97/pet-project-ugc" target="_blank" rel="noopener noreferrer">
+      <GitHub src="./images/github.png" alt="Github logo" />
     </a>
-      <Americanas src='./images/logotype-americanas.svg' alt="Americanas s.a. logo" />
+    <Americanas src="./images/logotype-americanas.svg" alt="Americanas s.a. logo" />
   </FooterContainer>
 );
 

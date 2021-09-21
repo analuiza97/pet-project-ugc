@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const PageHeader = styled.header`
   background: #2c2c2c;
   width: 100%;
-  height: 70px;
+  height: 90px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@ const PageHeader = styled.header`
   text-align: center;
 `;
 
-const Text = styled.h1`
+const Text = styled.text`
   font-family: 'VT323', monospace;
   font-size: 60px;
   color: white;
@@ -23,8 +23,8 @@ const Text = styled.h1`
 
 const Header = () => (
   <PageHeader>
-      <Text>PET Project Estágio Tech 2021</Text>
+    <Text>PET Project Estágio Tech 2021</Text>
   </PageHeader>
-)
+);
 
 export default Header;

@@ -6,18 +6,17 @@ import Head from 'next/head';
 
 const Container = styled.div`
   background-image: url('./images/background.jpg');
-	background-size: cover;
-	position: relative;
-	height: 100vh;
-	width: 100%;
-
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
   & main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 140px);
+    height: calc(100% - 215px);
   }
-`
+`;
 
 function Template({ children, title }) {
   return (
@@ -42,6 +41,6 @@ function Template({ children, title }) {
 Template.defaultProps = {
   title: 'Tratamento de Error Boundaries',
   children: <></>,
-}
+};
 
 export default Template;

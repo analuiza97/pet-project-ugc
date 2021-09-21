@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import Template from '../../components/Template';
 import TableUsers from '../../components/TableUsers';
 import useMock from '../../hooks/useMock';
-import { PageBackground, Loading } from './style';
+//import { PageBackground, Loading } from './style';
 
 function Home() {
   const { data, error, loading } = useMock();
@@ -22,19 +23,19 @@ function Home() {
   }, [data]);
 
   if (error) {
-    return null
+    return null;
   }
 
-  const Load = <Loading src="./images/preloader.gif" alt="loading" />
+  //const Load = <Loading src="./images/preloader.gif" alt="loading" />;
 
-  const Content = loading ? Load : <TableUsers data={users} />
+  const Loading = styled.img``;
+
+  const Content = loading ? <Loading src="./images/preloader.gif" alt="loading" /> : <TableUsers data={users} />;
 
   return (
-    <PageBackground>
-      <Template>
-        {Content}
-      </Template>
-    </PageBackground>
+    // <PageBackground>
+    <Template>{Content}</Template>
+    // </PageBackground>
   );
 }
 

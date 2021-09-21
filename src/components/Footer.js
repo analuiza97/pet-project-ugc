@@ -17,7 +17,7 @@ const Workplace = styled.img`
 `;
 
 const Americanas = styled.img`
-  height: 30px;
+  height: 20px;
 `;
 
 const Footer = () => (

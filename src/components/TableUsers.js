@@ -26,7 +26,7 @@ const Table = styled.table`
       font-weight: bold;
       padding: 16px;
       overflow-wrap: break-word;
-      text-transform: capitalize;
+      //text-transform: capitalize;
     }
 
   }

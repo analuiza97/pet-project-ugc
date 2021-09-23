@@ -25,7 +25,7 @@ const Footer = () => (
     <a href="https://github.com/analuiza97/pet-project-ugc" target="_blank" rel="noopener noreferrer">
       <GitHub src="./images/github.png" alt="Github logo" />
     </a>
-    <Americanas src="./images/logotype-americanas.svg" alt="Americanas s.a. logo" />
+    <Americanas src="./images/americanas.svg" alt="Americanas s.a. logo" />
   </FooterContainer>
 );
 

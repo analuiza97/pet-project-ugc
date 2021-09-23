@@ -1,4 +1,3 @@
-// import { Table } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -18,32 +17,32 @@ const Table = styled.table`
   border-spacing: 0;
 
   > thead {
-
     & th {
       background: #fafafa;
       border-bottom: 1px solid #f0f0f0;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: bold;
       padding: 16px;
       overflow-wrap: break-word;
       //text-transform: capitalize;
     }
-
   }
   > tbody {
-
     > tr {
+      :hover {
+        background-color: #fafafa;
+      }
 
       > td {
         position: relative;
-        padding: 16px;
+        padding: 15px;
         overflow-wrap: break-word;
         text-align: center;
-        font-size: 16px;
+        font-size: 18px;
         width: 25%;
         border-bottom: 1px solid #f0f0f0;
       }
-      
+
       &:last-child {
         > td {
           border: none;
@@ -51,16 +50,15 @@ const Table = styled.table`
       }
     }
   }
-  
+
   > tfoot {
     padding: 16px;
-    color: rgba(0,0,0,.85);
+    color: rgba(0, 0, 0, 0.85);
     background: #fafafa;
   }
 `;
 
 const TableUsers = ({ data }) => {
-
   if (!data.length) {
     return null;
   }
@@ -70,9 +68,9 @@ const TableUsers = ({ data }) => {
 
     const headCols = Object.keys(obj).map(title => <th key={title}>{title}</th>);
     return headCols;
-  }
+  };
 
-  const TableHead = <tr>{headCols()}</tr>
+  const TableHead = <tr>{headCols()}</tr>;
 
   const tableBody = data.map(obj => {
     const bodyCols = Object.keys(obj).map(key => <td key={obj[key]}>{obj[key]}</td>);
@@ -88,11 +86,11 @@ const TableUsers = ({ data }) => {
       </Table>
     </Container>
   );
-}
+};
 
 TableUsers.defaultProps = {
   data: [],
-}
+};
 
 export default TableUsers;
 export { TableUsers };

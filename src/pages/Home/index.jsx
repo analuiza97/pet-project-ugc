@@ -4,6 +4,14 @@ import Template from '../../components/Template';
 import TableUsers from '../../components/TableUsers';
 import useMock from '../../hooks/useMock';
 
+const LoadingWrapper = styled.div`
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
 function Home() {
   const { data, error, loading } = useMock();
   const [users, setUsers] = useState([]);
@@ -27,7 +35,13 @@ function Home() {
 
   const Loading = styled.img``;
 
-  const Content = loading ? <Loading src="./images/preloader.gif" alt="loading" /> : <TableUsers data={users} />;
+  const Content = loading ? (
+    <LoadingWrapper>
+      <Loading src="./images/preloader.gif" alt="loading" />
+    </LoadingWrapper>
+  ) : (
+    <TableUsers data={users} />
+  );
 
   return <Template>{Content}</Template>;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const Container = styled.div`
   overflow: hidden;
@@ -9,6 +10,8 @@ const Container = styled.div`
   font-family: Quicksand, arial, sans-serif;
   width: calc(100% - 20px);
   max-width: 1000px;
+  ${media.lessThan('medium')`
+  overflow: scroll`}
 `;
 
 const Table = styled.table`
@@ -25,6 +28,8 @@ const Table = styled.table`
       padding: 16px;
       overflow-wrap: break-word;
       //text-transform: capitalize;
+      ${media.lessThan('medium')`
+  font-size: 12px`}
     }
   }
   > tbody {
@@ -41,6 +46,8 @@ const Table = styled.table`
         font-size: 18px;
         width: 25%;
         border-bottom: 1px solid #f0f0f0;
+        ${media.lessThan('medium')`
+  font-size: 12px`}
       }
 
       &:last-child {

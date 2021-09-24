@@ -1,29 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const FooterContainer = styled.footer`
-  //position: absolute;
-  //bottom: 0;
+  position: fixed;
+  background: transparent;
+  bottom: 0;
   padding: 20px;
   display: flex;
   align-items: center;
-  //width: calc(100% - 40px);
-  //width: 100%;
-  height: 30px;
+  width: 100%;
   justify-content: space-between;
-  @media (max-width: 568px) {
-    height: initial;
-    margin-top: 20px;
-    position: initial;
-  }
 `;
 
 const GitHub = styled.img`
   height: 32px;
+  ${media.lessThan('medium')`
+  height: 20px`}
 `;
 
 const Americanas = styled.img`
   height: 20px;
+  ${media.lessThan('medium')`
+  height: 12px`}
 `;
 
 const Footer = () => (

@@ -5,7 +5,7 @@ import media from 'styled-media-query';
 const Container = styled.div`
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-  margin: 48px auto 0;
+  margin: 90px auto 0;
   border-radius: 5px;
   font-family: Quicksand, arial, sans-serif;
   width: calc(100% - 20px);
@@ -27,7 +27,6 @@ const Table = styled.table`
       font-weight: bold;
       padding: 16px;
       overflow-wrap: break-word;
-      //text-transform: capitalize;
       ${media.lessThan('medium')`
   font-size: 12px`}
     }
@@ -70,15 +69,6 @@ const TableUsers = ({ data }) => {
     return null;
   }
 
-  const headCols = () => {
-    const [obj] = data;
-
-    const headCols = Object.keys(obj).map(title => <th key={title}>{title}</th>);
-    return headCols;
-  };
-
-  const TableHead = <tr>{headCols()}</tr>;
-
   const tableBody = data.map(obj => {
     const bodyCols = Object.keys(obj).map(key => <td key={obj[key]}>{obj[key]}</td>);
     const key = Math.random();
@@ -88,7 +78,14 @@ const TableUsers = ({ data }) => {
   return (
     <Container>
       <Table>
-        <thead>{TableHead}</thead>
+        <thead>
+          <tr>
+            <th>Prontuário</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Escritório BIT</th>
+          </tr>
+        </thead>
         <tbody>{tableBody}</tbody>
       </Table>
     </Container>

@@ -4,7 +4,6 @@ import media from 'styled-media-query';
 
 const PageHeader = styled.header`
   background: #2c2c2c;
-  //width: 100%;
   height: 60px;
   position: relative;
   display: flex;

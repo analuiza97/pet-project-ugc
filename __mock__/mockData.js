@@ -1,9 +1,9 @@
 const users = [
-  { Prontuário: 458365, Nome: 'Ana Luíza Fontes', 'E-mail': 'ana.fontes@b2wdigital.com', 'Escritório BIT': 'SP' },
-  { Prontuário: 937247, Nome: 'Cleonildo Guimarães', 'E-mail': 'cleonildo.soares@b2wdigital.com', 'Escritório BIT': 'RJ' },
-  { Prontuário: 636552, Nome: 'Ivan Espinola', 'E-mail': 'ivan.espinola@b2wdigital.com', 'Escritório BIT': 'SP' },
-  { Prontuário: 283654, Nome: 'Gabriela Papp', 'E-mail': 'gabi.papp@b2wdigital.com', 'Escritório BIT': 'RJ' },
-  { Prontuário: 378664, Nome: 'Pedro Montes', 'E-mail': 'pedro.montes@b2wdigital.com', 'Escritório BIT': 'SP' },
+  { prontuario: 458365, nome: 'Ana Luíza Fontes', email: 'ana.fontes@b2wdigital.com', bit: 'SP' },
+  { prontuario: 937247, nome: 'Cleonildo Guimarães', email: 'cleonildo.soares@b2wdigital.com', bit: 'RJ' },
+  { prontuario: 636552, nome: 'Ivan Espinola', email: 'ivan.espinola@b2wdigital.com', bit: 'SP' },
+  { prontuario: 283654, nome: 'Gabriela Papp', email: 'gabi.papp@b2wdigital.com', bit: 'RJ' },
+  { prontuario: 378664, nome: 'Pedro Montes', email: 'pedro.montes@b2wdigital.com', bit: 'SP' },
 ];
 
 export default users;

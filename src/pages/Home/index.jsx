@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import Template from '../../components/Template';
+import Loading from '../../components/Loading';
 import TableUsers from '../../components/TableUsers';
 import useMock from '../../hooks/useMock';
-
-const LoadingWrapper = styled.div`
-  display: flex;
-  height: 500px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-`;
 
 function Home() {
   const { data, error, loading } = useMock();
@@ -33,15 +25,7 @@ function Home() {
     return null;
   }
 
-  const Loading = styled.img``;
-
-  const Content = loading ? (
-    <LoadingWrapper>
-      <Loading src="./images/preloader.gif" alt="loading" />
-    </LoadingWrapper>
-  ) : (
-    <TableUsers data={users} />
-  );
+  const Content = loading ? <Loading /> : <TableUsers data={users} />
 
   return <Template>{Content}</Template>;
 }

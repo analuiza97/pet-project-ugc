@@ -24,7 +24,6 @@ const Warning = styled.img`
 
 const ErrorText = styled.span`
   margin-left: 7px;
-  font-family: Quicksand, arial, sans-serif;
   font-size: 20px;
   ${media.lessThan('medium')`
   font-size: 12px;

@@ -1,6 +1,6 @@
 import data from '../../../__mock__/mockData';
 
-const randomBoolean = () => Math.random() < 0.5;
+const randomBoolean = () => Math.random() < .5;
 
 const serviceUser = (req, res) => {
   const withDataError = randomBoolean();

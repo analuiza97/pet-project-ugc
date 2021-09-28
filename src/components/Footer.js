@@ -1,36 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 const FooterContainer = styled.footer`
-  position: fixed;
-  background: transparent;
-  bottom: 0;
-  padding: 20px;
+  color: #fff;
+  width: calc(100% - 3% - 90px);
+  height: 30px;
   display: flex;
   align-items: center;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  background: #ff0036;
+  padding-left: 90px;
+  font-size: .65rem;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+
+  > p {
+    margin: auto;
+  }
+  
+  @media (max-width: 767.98px) {
+    width: calc(100% - 3%);
+    padding-left: 0px;
+    
+    &.open {
+      padding-left: 90px;
+    }
+  }
 `;
 
-const GitHub = styled.img`
-  height: 32px;
-  ${media.lessThan('medium')`
-  height: 20px`}
-`;
-
-const Americanas = styled.img`
-  height: 20px;
-  ${media.lessThan('medium')`
-  height: 12px`}
-`;
-
-const Footer = () => (
-  <FooterContainer>
-    <a href="https://github.com/analuiza97/pet-project-ugc" target="_blank" rel="noopener noreferrer">
-      <GitHub src="./images/github.png" alt="Github logo" />
-    </a>
-    <Americanas src="./images/americanas.svg" alt="Americanas s.a. logo" />
+const Footer = ({ collapse }) => (
+  <FooterContainer className={collapse ? 'open' : ''}>
+    <p><b>© 2021 Americanas S.A.</b> Todos os direitos reservados.</p>
   </FooterContainer>
 );
 

@@ -22,7 +22,7 @@ const PageHeader = styled.header`
   }
   
   @media (max-width: 767.98px) {
-    width: 1px;
+    width: 0px;
     padding: 0;
 
     &.open {

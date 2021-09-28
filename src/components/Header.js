@@ -1,7 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 const PageHeader = styled.header`
   background: #fff;
@@ -15,9 +13,6 @@ const PageHeader = styled.header`
   align-items: center;
   text-align: center;
   border-right: 1px solid #cccccc;
-  /* ${media.lessThan('medium')`
-  height: initial;`} */
-  /* box-shadow: 4px 0px 10px 0px #dbdbdb; */
   box-sizing: border-box;
   z-index: 10;
   transition: all .5s ease;

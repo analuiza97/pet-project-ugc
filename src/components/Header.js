@@ -24,6 +24,7 @@ const PageHeader = styled.header`
   @media (max-width: 767.98px) {
     width: 0px;
     padding: 0;
+    border-right: none;
 
     &.open {
       width: 90px;

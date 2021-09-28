@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
   color: #fff;
-  width: calc(100% - 3% - 90px);
+  width: calc(100% - 3%);
   height: 30px;
   display: flex;
   align-items: center;
@@ -19,7 +19,6 @@ const FooterContainer = styled.footer`
   }
   
   @media (max-width: 767.98px) {
-    width: calc(100% - 3%);
     padding-left: 0px;
     
     &.open {

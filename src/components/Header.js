@@ -1,30 +1,81 @@
 import React from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 const PageHeader = styled.header`
-  background: #2c2c2c;
-  width: 100%;
-  height: 70px;
-  position: relative;
+  background: #fff;
+  height: 100vh;
+  width: 90px;
+  padding: 40px 30px;
+  position: fixed;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  border-right: 1px solid #cccccc;
+  /* ${media.lessThan('medium')`
+  height: initial;`} */
+  /* box-shadow: 4px 0px 10px 0px #dbdbdb; */
+  box-sizing: border-box;
+  z-index: 10;
+  transition: all .5s ease;
+  
+  > button {
+    display: none;
+  }
+  
+  @media (max-width: 767.98px) {
+    width: 1px;
+    padding: 0;
+
+    &.open {
+      width: 90px;
+      padding: 40px 30px;
+    }
+    
+    > img {
+      display: none;
+    }
+    
+    > button {
+      display: block;
+      position: absolute;
+      right: -50px;
+      top: 50px;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      
+      & img {
+        transition: all 250ms ease;
+
+        &.btn-plus {
+          transform: rotate(45deg);
+        }
+      } 
+    }
+  }
 `;
 
-const Text = styled.h1`
-  font-family: 'VT323', monospace;
-  font-size: 60px;
-  color: white;
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-`;
+const Header = ({collapse, toggleCollapse}) => {
 
-const Header = () => (
-  <PageHeader>
-      <Text>PET Project Estágio Tech 2021</Text>
-  </PageHeader>
-)
+  return (
+    <PageHeader className={collapse ? 'open' : ''}>
+      <Image src='/images/americanas-short.svg' alt='logotipo Americanas' width="22" height="22"/>
+      <Image src='/images/github.svg' alt='logotipo Github' width="22" height="22"/>
+      <button type='button' onClick={toggleCollapse} >
+        <Image className={collapse ? '' : 'btn-plus'} src='/images/close.svg' alt='logotipo Github' width="22" height="22" />
+      </button> 
+    </PageHeader>
+  );
+};
+
+Header.defaultProps = {
+  collapse: false,
+  setCollapse: () => false,
+}
 
 export default Header;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Template from '../../components/Template';
+import Loading from '../../components/Loading';
 import TableUsers from '../../components/TableUsers';
 import useMock from '../../hooks/useMock';
-import { PageBackground, Loading } from './style';
 
 function Home() {
   const { data, error, loading } = useMock();
@@ -22,20 +22,12 @@ function Home() {
   }, [data]);
 
   if (error) {
-    return null
+    return null;
   }
 
-  const Load = <Loading src="./images/preloader.gif" alt="loading" />
+  const Content = loading ? <Loading /> : <TableUsers data={users} />
 
-  const Content = loading ? Load : <TableUsers data={users} />
-
-  return (
-    <PageBackground>
-      <Template>
-        {Content}
-      </Template>
-    </PageBackground>
-  );
+  return <Template>{Content}</Template>;
 }
 
 export default Home;

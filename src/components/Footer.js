@@ -2,30 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  position: absolute;
-  bottom: 0;
-  padding: 20px;
+  color: #fff;
+  width: calc(100% - 3% - 90px);
+  height: 30px;
   display: flex;
   align-items: center;
-  width: calc(100% - 40px);
-  height: 30px;
-  justify-content: space-between;
+  justify-content: center;
+  background: #ff0036;
+  padding-left: 90px;
+  font-size: .65rem;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+
+  > p {
+    margin: auto;
+  }
+  
+  @media (max-width: 767.98px) {
+    width: calc(100% - 3%);
+    padding-left: 0px;
+    
+    &.open {
+      padding-left: 90px;
+    }
+  }
 `;
 
-const Workplace = styled.img`
-  height: 30px;
-`;
-
-const Americanas = styled.img`
-  height: 30px;
-`;
-
-const Footer = () => (
-  <FooterContainer>
-    <a href="https://b2wdigital.workplace.com" target="_blank" rel="noopener noreferrer">
-      <Workplace src='./images/workplace-logo.svg' alt="Workplace logo" />
-    </a>
-      <Americanas src='./images/logotype-americanas.svg' alt="Americanas s.a. logo" />
+const Footer = ({ collapse }) => (
+  <FooterContainer className={collapse ? 'open' : ''}>
+    <p><b>© 2021 Americanas S.A.</b> Todos os direitos reservados.</p>
   </FooterContainer>
 );
 

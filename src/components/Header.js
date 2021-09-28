@@ -25,10 +25,11 @@ const PageHeader = styled.header`
     width: 0px;
     padding: 0;
     border-right: none;
-
+    
     &.open {
       width: 90px;
       padding: 40px 30px;
+      border-right: 1px solid #cccccc;
     }
     
     > img {

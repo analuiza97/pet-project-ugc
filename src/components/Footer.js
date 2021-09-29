@@ -9,17 +9,17 @@ const FooterContainer = styled.footer`
   justify-content: center;
   background: #ff0036;
   padding-left: 90px;
-  font-size: .65rem;
+  font-size: 0.65rem;
   box-sizing: border-box;
   transition: all 200ms ease-in-out;
 
   > p {
-    margin: auto;
+    margin-bottom: 0.3rem;
   }
-  
+
   @media (max-width: 767.98px) {
     padding-left: 0px;
-    
+
     &.open {
       padding-left: 90px;
     }
@@ -28,7 +28,9 @@ const FooterContainer = styled.footer`
 
 const Footer = ({ collapse }) => (
   <FooterContainer className={collapse ? 'open' : ''}>
-    <p><b>© 2021 Americanas S.A.</b> Todos os direitos reservados.</p>
+    <p>
+      <b>© 2021 Americanas S.A.</b> Todos os direitos reservados.
+    </p>
   </FooterContainer>
 );
 

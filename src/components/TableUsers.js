@@ -17,7 +17,7 @@ const Table = styled.table`
   background: #ffffff;
   border-color: transparent;
   border-spacing: 0;
-  font-size: .8rem;
+  font-size: .9rem;
   width: 100%;
   
   > thead {

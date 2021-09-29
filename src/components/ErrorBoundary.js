@@ -8,6 +8,7 @@ const Container = styled.div`
   align-items: center;
   gap: 20px;
   margin: 48px auto 0;
+  padding: 5px 10px;
 `;
 
 const ErrorGif = styled.img`

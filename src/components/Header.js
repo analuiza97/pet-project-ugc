@@ -6,7 +6,7 @@ const PageHeader = styled.header`
   height: 100vh;
   width: 90px;
   padding: 40px 30px;
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

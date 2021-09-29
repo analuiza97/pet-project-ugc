@@ -20,6 +20,10 @@ const FooterContainer = styled.footer`
   @media (max-width: 767.98px) {
     padding-left: 0px;
 
+    > p {
+      margin: 2rem;
+    }
+
     &.open {
       padding-left: 90px;
     }
